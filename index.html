@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170f2f">
+<meta name="description" content="Molla-এর জন্য একটি হৃদয়ছোঁয়া জন্মদিনের সারপ্রাইজ।">
+<title>Happy Birthday Molla ❤️</title>
+<style>
+:root{--night:#170f2f;--pink:#ff6f9f;--gold:#ffd98a;--cream:#fff8f1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif;background:radial-gradient(ellipse at top,#42205f 0%,#21143e 42%,#100b22 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffd98a 1px,transparent 1px);background-size:57px 57px,91px 91px;background-position:0 0,23px 41px;animation:twinkle 5s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.18}to{opacity:.5}}
+main{position:relative;z-index:1;width:min(760px,100%);margin:auto;padding:26px 17px 55px;text-align:center}
+.pill{display:inline-block;border:1px solid #ffffff40;background:#ffffff0d;padding:8px 15px;border-radius:999px;font-size:.85rem;letter-spacing:.04em;color:#ffe2ed}
+.hero{min-height:78vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0}
+.eyebrow{color:var(--gold);letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;margin:24px 0 10px}
+h1{font-size:clamp(2.6rem,12vw,5.2rem);line-height:1.08;margin:0;color:#fff;text-shadow:0 0 28px #ff6f9f60}
+h1 span{display:block;color:var(--pink)}
+.subtitle{font-size:1.05rem;line-height:1.9;max-width:530px;color:#f3e7fa;margin:20px auto 25px}
+.cake{font-size:5rem;filter:drop-shadow(0 0 25px #ff6f9f55);animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:14px 22px;font-weight:750;transition:transform .2s,filter .2s}
+button:active{transform:scale(.97)}
+.primary{background:linear-gradient(135deg,#ff9cba,#ffd98a);color:#32142e;box-shadow:0 9px 28px #ff6f9f35}
+.secondary{background:#ffffff10;border:1px solid #ffffff45;color:#fff}
+.buttons{display:flex;gap:11px;justify-content:center;flex-wrap:wrap}
+.card{margin:22px 0;padding:clamp(22px,5vw,36px);border-radius:25px;text-align:left;background:linear-gradient(145deg,#ffffff12,#ffffff07);border:1px solid #ffffff20;box-shadow:0 18px 50px #00000020;backdrop-filter:blur(8px)}
+.card h2{text-align:center;color:var(--gold);font-size:1.5rem;margin:0 0 18px}
+.card p{font-size:1.04rem;line-height:2;margin:12px 0;color:#f8edf9}
+.letter{display:none;animation:rise .7s ease both}
+.letter.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.quote{font-size:1.22rem!important;text-align:center;color:#ffdbe7!important}
+.signature{text-align:right!important;color:var(--gold)!important;font-weight:700}
+footer{padding:25px 0 5px;color:#d7c9e5;font-size:.9rem;line-height:1.8}
+.heart{display:inline-block;color:#ff7ca7;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+.confetti{position:fixed;z-index:5;top:-20px;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
+.small{font-size:.9rem!important;color:#d9cbe6!important;text-align:center}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="pill">একজন বিশেষ বন্ধুর জন্য, মন থেকে ❤️</div>
+    <div class="cake" aria-label="জন্মদিনের কেক">🎂</div>
+    <p class="eyebrow">A special day for someone special</p>
+    <h1>Happy Birthday <span>Molla!</span></h1>
+    <p class="subtitle">দূরত্ব হয়তো আমাদের দেখা কমিয়ে দিয়েছে, কিন্তু বন্ধুত্বের জায়গাটা কখনো ছোট করতে পারেনি। আজকের দিনটা শুধু তোমার! 🎉</p>
+    <div class="buttons">
+      <button class="primary" id="openLetter">💌 তোমার জন্য একটি চিঠি</button>
+      <button class="secondary" id="celebrate">🎊 সারপ্রাইজ!</button>
+    </div>
+  </section>
+
+  <section class="card letter" id="letter" aria-live="polite">
+    <h2>💖 প্রিয় Molla,</h2>
+    <p>শুভ জন্মদিন, আমার Best Friend! 🥳❤️</p>
+    <p>জীবনে কিছু মানুষ থাকে, যাদের সঙ্গে প্রতিদিন দেখা না হলেও মনের মধ্যে তাদের জায়গাটা সবসময় আলাদা থাকে। তুমি আমার কাছে তেমনই একজন। তুমি গ্রামে থাকো, আমাদের সামনাসামনি দেখা হয় খুব কম—তবুও বন্ধুত্বের মূল্য শুধু দেখা হওয়ার ওপর নির্ভর করে না।</p>
+    <p>হয়তো সবসময় পাশে থাকতে পারি না, প্রতিদিন কথা হয় না, কিংবা মনের সব কথা বলা হয়ে ওঠে না। কিন্তু আজ তোমার জন্মদিনে মন থেকে চাই, তোমার জীবনের প্রতিটি দিন আনন্দ, শান্তি আর সুন্দর মুহূর্তে ভরে উঠুক। তোমার মুখের হাসিটা যেন কখনো হারিয়ে না যায়।</p>
+    <p>তোমার সব ভালো স্বপ্ন পূরণ হোক, প্রতিটি ভালো কাজে সফলতা আসুক, আর কঠিন সময়ে তুমি যেন সাহস হারিয়ে না ফেলো। দূরত্ব যতই থাকুক, আমাদের বন্ধুত্বে যেন সবসময় সত্যতা, সম্মান আর বিশ্বাস থাকে।</p>
+    <p class="quote">“ভালো বন্ধুত্বের জন্য প্রতিদিন দেখা হওয়া জরুরি নয়—জরুরি হলো, দূরে থেকেও মনে জায়গা থাকা।” <span class="heart">♥</span></p>
+    <p>আজকের দিনটা মন খুলে উপভোগ করো, অনেক হাসো, অনেক আনন্দ করো। আল্লাহ তোমাকে সুস্থ রাখুন, নেক হায়াত দিন, জীবনে বরকত দিন এবং দুনিয়া ও আখিরাতে কল্যাণ দান করুন। আমিন। 🤲</p>
+    <p>আবারও অনেক অনেক শুভ জন্মদিন, Molla! তোমার জন্য রইল হৃদয়ভরা ভালোবাসা, দোয়া আর বন্ধুত্বের শুভকামনা। 🎂🎁</p>
+    <p class="signature">ইতি,<br>তোমার Best Friend ❤️</p>
+  </section>
+
+  <section class="card">
+    <h2>🤲 তোমার জন্য আমার দোয়া</h2>
+    <p style="text-align:center">আল্লাহ তোমার জীবনকে সুখ, শান্তি, সুস্থতা ও বরকতে ভরিয়ে দিন। তোমার হালাল স্বপ্নগুলো পূরণ করুন, বিপদ থেকে হেফাজত করুন এবং সবসময় সঠিক পথে রাখুন। আমিন।</p>
+  </section>
+
+  <section class="card">
+    <h2>🎁 ছোট্ট একটা কথা</h2>
+    <p style="text-align:center">দেখা কম হয় বলে বন্ধুত্ব কমে যায় না, বন্ধু। দূরে থেকেও তুমি আমার কাছে স্পেশাল। আজকের দিনটা তোমার মতোই সুন্দর হোক! <span class="heart">❤️</span></p>
+  </section>
+  <footer>
+    <div style="font-size:1.6rem">🎂 ✨ 🎈</div>
+    Made with love for Molla<br>
+    <span class="small">একজন Best Friend-এর পক্ষ থেকে, হৃদয়ের গভীর থেকে।</span>
+  </footer>
+</main>
+<script>
+const letter=document.getElementById('letter');
+document.getElementById('openLetter').addEventListener('click',()=>{
+  letter.classList.add('show');
+  letter.scrollIntoView({behavior:'smooth',block:'start'});
+  burst(35);
+});
+document.getElementById('celebrate').addEventListener('click',()=>burst(75));
+function burst(count){
+  const symbols=['💖','✨','🎉','🎊','💕','🌟','🎈'];
+  for(let i=0;i<count;i++){
+    const el=document.createElement('span');
+    el.className='confetti';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.animationDuration=(2.5+Math.random()*3)+'s';
+    el.style.animationDelay=(Math.random()*.7)+'s';
+    el.style.fontSize=(15+Math.random()*20)+'px';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),6500);
+  }
+}
+</script>
+</body>
+</html>
